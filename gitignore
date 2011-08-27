@@ -1,0 +1,41 @@
+### OS X
+
+.DS_Store
+Icon?
+
+# Thumbnails
+._*
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+
+### Linux
+
+.*
+!.gitignore
+*~
+*.sw[a-p]
+
+# KDE
+.directory
+
+
+### TextMate
+
+*.tmproj
+*.tmproject
+tmtags
+
+
+### Vim
+
+.*.sw[a-z]
+*.un~
+Session.vim
+
+
+### Redcar
+
+.redcar
