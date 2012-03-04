@@ -27,7 +27,7 @@ DISABLE_COMPLETION_WAITING_DOTS="true"
 plugins=(c cap git brew bundler gem osx rails3 rvm textmate)
 
 source $ZSH/oh-my-zsh.sh
-export PATH="/usr/local/bin:$PATH"
+export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 
 # load RVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
