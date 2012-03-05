@@ -26,7 +26,7 @@ def symlink_unless_target_exists(source, target)
   end
 end
 
-DOTFILES = %w(gemrc gitignore irbrc vimrc vim zlogin zshrc)
+DOTFILES = %w(ackrc gemrc gitignore irbrc vimrc vim zlogin zshrc)
 HOME = ENV["HOME"]
 ZSH_CUSTOM = Dir["oh-my-zsh/custom/*"]
 
