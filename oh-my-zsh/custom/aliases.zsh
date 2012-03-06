@@ -1,5 +1,5 @@
 # brew
-alias bu='brew update && brew install `brew outdated`'
+alias bu='brew update && brew upgrade'
 
 # cd
 alias ..='cd ..'
