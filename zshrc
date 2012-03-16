@@ -31,3 +31,7 @@ export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 
 # load RVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+
+export JAVA_HOME="$(/usr/libexec/java_home)"
+export AWS_IAM_HOME="/usr/local/Cellar/aws-iam-tools/1.4.0/jars"
+export AWS_CREDENTIAL_FILE=$HOME/.aws-credentials-master
