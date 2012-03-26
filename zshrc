@@ -37,7 +37,9 @@ export JAVA_HOME="$(/usr/libexec/java_home)"
 export AWS_IAM_HOME="/usr/local/Cellar/aws-iam-tools/1.4.0/jars"
 export AWS_CREDENTIAL_FILE=$HOME/.aws-credentials-master
 
-export EC2_PRIVATE_KEY="$(/bin/ls $HOME/.ec2/pk-*.pem)"
-export EC2_CERT="$(/bin/ls $HOME/.ec2/cert-*.pem)"
+if [ -f $HOME/.ec2/ ]; then
+  export EC2_PRIVATE_KEY="$(/bin/ls $HOME/.ec2/pk-*.pem)"
+  export EC2_CERT="$(/bin/ls $HOME/.ec2/cert-*.pem)"
+fi
 
 export AWS_RDS_HOME="/usr/local/Cellar/rds-command-line-tools/1.3.003/jars"
