@@ -49,3 +49,6 @@ alias britunnel='sshuttle -r britannia.kiskolabs.net 0.0.0.0/0'
 
 # redcar
 alias rc='redcar --fork'
+
+# tree
+alias tree='tree -C' # Turn colorization on always
