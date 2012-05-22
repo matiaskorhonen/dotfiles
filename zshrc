@@ -43,3 +43,6 @@ if [ -f $HOME/.ec2/ ]; then
 fi
 
 export AWS_RDS_HOME="/usr/local/Cellar/rds-command-line-tools/1.3.003/jars"
+
+# Hasty fix for the issues introduced by http://git.io/2hdItQ
+for config_file ($ZSH_CUSTOM/*.zsh) source $config_file
