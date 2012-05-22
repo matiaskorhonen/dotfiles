@@ -30,6 +30,7 @@ export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 
 # load RVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 # Amazon CLI tools configuration
 export JAVA_HOME="$(/usr/libexec/java_home)"
