@@ -7,8 +7,10 @@
 --flush
 
 --type-add=ruby=.haml,.rake,.rsel
+--type-add=js=.json
 --type-set=markdown=.md
 --type-set=scala=.scala
+--type-set=mustache=.mustache
 --type-set=handlebars=.handlebars
 --type-set=sass=.scss,.sass
 --type-set=coffeescript=.coffee
