@@ -38,8 +38,8 @@ alias rst='touch tmp/restart.txt'
 alias r='rails'
 alias pss='passenger start -p 8080'
 
-# Underpants
-alias up='underpants'
+# Serve the current directory
+alias servethis='python2.6 -m SimpleHTTPServer'
 
 # commands starting with % for pasting from web
 alias %=' '
