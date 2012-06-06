@@ -52,3 +52,6 @@ alias rc='redcar --fork'
 
 # tree
 alias tree='tree -C' # Turn colorization on always
+
+# tab
+alias t='tab' # Open a new tab in the same directory
