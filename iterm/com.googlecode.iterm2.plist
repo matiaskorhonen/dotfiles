@@ -177,7 +177,7 @@
 		<true/>
 	</array>
 	<key>NSWindow Frame Preferences</key>
-	<string>276 153 924 485 0 0 2560 1418 </string>
+	<string>1102 102 924 485 0 0 2560 1418 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
 	<string>1213 350 893 448 0 0 2560 1418 </string>
 	<key>New Bookmarks</key>
@@ -334,7 +334,7 @@
 			<key>Automatically Log</key>
 			<false/>
 			<key>BM Growl</key>
-			<true/>
+			<false/>
 			<key>Background Color</key>
 			<dict>
 				<key>Blue Component</key>
