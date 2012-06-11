@@ -177,9 +177,9 @@
 		<true/>
 	</array>
 	<key>NSWindow Frame Preferences</key>
-	<string>1102 102 924 485 0 0 2560 1418 </string>
+	<string>797 375 924 485 0 0 2560 1418 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>1213 350 893 448 0 0 2560 1418 </string>
+	<string>1798 2 760 416 0 0 2560 1418 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -908,7 +908,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2012-06-06T11:21:57Z</date>
+	<date>2012-06-11T06:29:42Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>ShowBookmarkName</key>
@@ -936,7 +936,7 @@
 	<key>UseBorder</key>
 	<false/>
 	<key>UseCompactLabel</key>
-	<true/>
+	<false/>
 	<key>UseLionStyleFullscreen</key>
 	<true/>
 	<key>WebKitDefaultFontSize</key>
