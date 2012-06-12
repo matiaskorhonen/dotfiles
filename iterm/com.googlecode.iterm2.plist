@@ -177,7 +177,7 @@
 	<key>NSWindow Frame Config Panel</key>
 	<string>124 122 254 559 0 0 1280 778 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>630 293 924 485 0 0 1920 1058 </string>
+	<string>405 457 924 485 0 0 1920 1058 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
 	<string>184 481 767 378 0 0 1920 1058 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
@@ -896,7 +896,7 @@
 	<key>PromptOnClose</key>
 	<true/>
 	<key>PromptOnQuit</key>
-	<true/>
+	<false/>
 	<key>QuitWhenAllWindowsClosed</key>
 	<false/>
 	<key>RightCommand</key>
