@@ -12,6 +12,7 @@ alias la='ls -A'
 
 # git
 alias gl='git pull'
+alias glr='git pull --rebase'
 alias gp='git push'
 alias gd='git diff'
 alias gc='git commit'
