@@ -56,3 +56,7 @@ alias tree='tree -C' # Turn colorization on always
 
 # tab
 alias t='tab' # Open a new tab in the same directory
+
+# spotlight
+alias sc='mdfind -onlyin . ' # Search in the current directory
+alias meta='mdls' # Display file metadata (from Spotlight)
