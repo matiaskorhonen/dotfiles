@@ -47,6 +47,3 @@ export AWS_RDS_HOME="/usr/local/Cellar/rds-command-line-tools/1.3.003/jars"
 
 # Make JRuby default to 1.9 mode
 export JRUBY_OPTS=--1.9
-
-# Hasty fix for the issues introduced by http://git.io/2hdItQ
-for config_file ($ZSH_CUSTOM/*.zsh) source $config_file
