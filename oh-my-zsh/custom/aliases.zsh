@@ -60,3 +60,6 @@ alias t='tab' # Open a new tab in the same directory
 # spotlight
 alias sc='mdfind -onlyin . ' # Search in the current directory
 alias meta='mdls' # Display file metadata (from Spotlight)
+
+# Sublime Text 2
+alias subl="/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl"
