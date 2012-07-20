@@ -1,5 +1,6 @@
 # encoding: UTF-8
 require "fileutils"
+require "erb"
 
 DOTFILES = %w(ackrc gemrc gitignore irbrc pryrc railsrc vimrc vim zlogin zshrc)
 HOME = ENV["HOME"]
@@ -24,9 +25,27 @@ def symlink_unless_target_exists(source, target)
     type = File.ftype(target)
     puts "Exists: \t".red + "#{target}".cyan + " [#{type}]"
   else
-    puts "Linking: \t".green + "#{target}".cyan + " -> #{target}"
+    puts "Linking: \t".green + "#{target}".cyan + " -> #{source}"
     FileUtils.ln_s(source, target)
   end
+end
+
+def git_config_value(key)
+  `git config --get #{key}`.chomp
+end
+
+def git_config
+  @git_config ||= {
+    :name => git_config_value("user.name"),
+    :email => git_config_value("user.email"),
+    :github_user => git_config_value("github.user"),
+    :github_token => git_config_value("github.token")
+  }
+end
+
+def existing_or_new_value(key)
+  value = $stdin.gets.chomp
+  value.empty? ? git_config[key] : value
 end
 
 namespace :dotfiles do
@@ -50,6 +69,39 @@ namespace :dotfiles do
       target = File.join(HOME, "." + file)
       source = File.expand_path(file)
       symlink_unless_target_exists(source, target)
+    end
+
+    puts "\n=> Installing .gitconfig"
+
+    if File.exists? "#{HOME}/.gitconfig"
+      print "  ~/.gitconfig already exists, do you want to overwrite it ? [yN] "
+
+      override = if $stdin.gets.chomp.downcase == "y"
+        true
+      else
+        puts "=> OK, the existing .gitconfig will be left in place."
+        false
+      end
+
+    end
+
+    if override || !File.exists?("#{HOME}/.gitconfig")
+      print "  Git name [#{git_config[:name]}]: "
+      name = existing_or_new_value(:name)
+
+      print "  Git email [#{git_config[:email]}]: "
+      email = existing_or_new_value(:email)
+
+      print "  GitHub user [#{git_config[:github_user]}]: "
+      github_user = existing_or_new_value(:github_user)
+
+      print "  GitHub token [#{git_config[:github_token]}]: "
+      github_token = existing_or_new_value(:github_token)
+
+      File.open(File.join(HOME, ".gitconfig"), "w") do |f|
+        template = File.read(File.expand_path("gitconfig.erb"))
+        f.write ERB.new(template).result(binding)
+      end
     end
 
     puts "\n=> All done now!"
