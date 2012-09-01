@@ -14,3 +14,5 @@
 --type-set=handlebars=.handlebars
 --type-set=sass=.scss,.sass
 --type-set=coffeescript=.coffee
+--type-set=illustrator=.ai
+--noillustrator
