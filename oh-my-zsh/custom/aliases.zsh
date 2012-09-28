@@ -29,14 +29,7 @@ alias got='git '
 alias get='git '
 
 # rails
-alias sc='script/console'
-alias ss='script/server'
-alias sg='script/generate'
-alias a='autotest -rails'
-alias tlog='tail -f log/development.log'
-alias scaffold='script/generate nifty_scaffold'
 alias migrate='rake db:migrate db:test:clone'
-alias rst='touch tmp/restart.txt'
 alias r='rails'
 alias pss='passenger start -p 8080'
 
