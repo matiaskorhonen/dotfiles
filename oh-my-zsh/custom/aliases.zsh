@@ -57,3 +57,6 @@ alias meta='mdls' # Display file metadata (from Spotlight)
 
 # Sublime Text 2
 alias subl="/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl"
+
+# Less useless listener grabbing on OS X
+alias netlisteners="lsof -i -P | grep LISTEN"
