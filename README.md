@@ -11,4 +11,5 @@ installed in `~/.oh-my-zsh`)
 
 ## Caveats
 
-Some of the configuration (e.g. the [RVM](https://rvm.io/) configuration in .rvmrc) might be specific to my set-up.
+* Some of the configuration (e.g. the [RVM](https://rvm.io/) configuration in .rvmrc) might be specific to my set-up.
+* I don't take responsibility for anything at all
