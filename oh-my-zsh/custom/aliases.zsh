@@ -66,4 +66,4 @@ alias subl="/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl"
 alias netlisteners="lsof -i -P | grep LISTEN"
 
 # Kill coreaudio to fix AirPlay
-alias fixairplay="sudo kill `ps -ax | grep 'coreaudiod' | grep 'sbin' |awk '{print $1}'`"
+alias fixairplay="sudo pkill coreaudiod"
