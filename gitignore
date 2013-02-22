@@ -39,3 +39,8 @@ Session.vim
 ### Redcar
 
 .redcar
+
+
+### Log rotated development logs (https://gist.github.com/k33l0r/5012502)
+
+log/*.log.*
