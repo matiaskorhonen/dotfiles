@@ -23,7 +23,7 @@ ZSH_THEME="lukerandall"
 DISABLE_COMPLETION_WAITING_DOTS="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-plugins=(c cap git github brew bundler gem heroku osx rails3 rvm textmate urltools)
+plugins=(c cap git github brew gem heroku osx rails3 rvm textmate urltools)
 
 source $ZSH/oh-my-zsh.sh
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
