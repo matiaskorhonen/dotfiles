@@ -1,6 +1,6 @@
 rvm_pretty_print_flag=1
 rvm_archflags="-arch x86_64"
-rvm_make_flags="-march=nocona -O2 -pipe" # Only for 64-bit i5 and i7 processors
+rvm_configure_env=(CFLAGS="-march=nocona -O2 -pipe") # Only for 64-bit i5 and i7 processors
 rvm_project_rvmrc=0
 rvm_configure_flags="--with-openssl-dir=$rvm_path/usr --with-readline-dir=$rvm_path/usr"
 rvm_gem_options="--no-rdoc --no-ri"
