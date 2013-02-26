@@ -1,0 +1,8 @@
+ * A new mode for push, "simple", which is a cross between "current"
+   and "upstream", has been introduced. "git push" without any refspec
+   will push the current branch out to the same name at the remote
+   repository only when it is set to track the branch with the same
+   name over there.  The plan is to make this mode the new default
+   value when push.default is not configured.
+
+https://raw.github.com/git/git/master/Documentation/RelNotes/1.7.11.txt
