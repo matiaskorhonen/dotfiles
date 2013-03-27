@@ -44,9 +44,6 @@ alias servethis='python2.6 -m SimpleHTTPServer'
 # commands starting with % for pasting from web
 alias %=' '
 
-# sshuttle
-alias britunnel='sshuttle -r britannia.kiskolabs.net 0.0.0.0/0'
-
 # redcar
 alias rc='redcar --fork'
 
