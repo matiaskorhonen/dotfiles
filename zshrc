@@ -28,6 +28,9 @@ plugins=(c cap git github brew gem heroku osx rails3 rvm textmate urltools)
 source $ZSH/oh-my-zsh.sh
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 
+# Bundler editor (bundle open GEM)
+export BUNDLER_EDITOR="mate -w"
+
 # load RVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
