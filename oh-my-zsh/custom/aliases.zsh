@@ -65,3 +65,6 @@ alias netlisteners="lsof -i -P | grep LISTEN"
 
 # Kill coreaudio to fix AirPlay
 alias fixairplay="sudo pkill coreaudiod"
+
+# Hexadecimal randomness
+alias rand="openssl rand -hex"
