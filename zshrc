@@ -57,3 +57,7 @@ export AWS_RDS_HOME="/usr/local/Cellar/rds-command-line-tools/1.3.003/jars"
 
 # Make JRuby default to 1.9 mode
 export JRUBY_OPTS=--1.9
+
+if [[ -d /usr/local/share/npm/bin ]] then
+  export PATH="/usr/local/share/npm/bin:$PATH"
+fi
