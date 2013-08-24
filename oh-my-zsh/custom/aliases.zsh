@@ -1,6 +1,3 @@
-# brew
-alias bu='brew update && brew upgrade'
-
 # "cat"
 # sudo easy_install Pygments
 alias ccat='pygmentize -O style=native -f console256 -g'
