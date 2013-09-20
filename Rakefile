@@ -2,7 +2,7 @@
 require "fileutils"
 require "erb"
 
-DOTFILES = %w(ackrc gemrc gitignore inputrc irbrc pryrc rvmrc railsrc vimrc vim zlogin zshrc)
+DOTFILES = %w(ackrc gemrc gitignore inputrc irbrc pryrc rvmrc railsrc vimrc vim zlogin zprofile zshrc)
 HOME = ENV["HOME"]
 ZSH_CUSTOM = Dir["oh-my-zsh/custom/*"]
 

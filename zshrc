@@ -26,7 +26,6 @@ DISABLE_COMPLETION_WAITING_DOTS="true"
 plugins=(c cap git github brew gem heroku osx rails3 rvm textmate urltools)
 
 source $ZSH/oh-my-zsh.sh
-export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 
 # Default editor
 export EDITOR="vim"
@@ -34,30 +33,5 @@ export EDITOR="vim"
 # Bundler editor (bundle open GEM)
 export BUNDLER_EDITOR="mate -w"
 
-# load RVM
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-
-if [[ -d /Applications/Postgres.app ]] then
-  export PATH="/Applications/Postgres.app/Contents/MacOS/bin:$PATH"
-fi
-
-# Amazon CLI tools configuration
-export JAVA_HOME="$(/usr/libexec/java_home)"
-
-export AWS_IAM_HOME="/usr/local/Cellar/aws-iam-tools/1.4.0/jars"
-export AWS_CREDENTIAL_FILE=$HOME/.aws-credentials-master
-
-if [ -f $HOME/.ec2/ ]; then
-  export EC2_PRIVATE_KEY="$(/bin/ls $HOME/.ec2/pk-*.pem)"
-  export EC2_CERT="$(/bin/ls $HOME/.ec2/cert-*.pem)"
-fi
-
-export AWS_RDS_HOME="/usr/local/Cellar/rds-command-line-tools/1.3.003/jars"
-
 # Make JRuby default to 1.9 mode
 export JRUBY_OPTS=--1.9
-
-if [[ -d /usr/local/share/npm/bin ]] then
-  export PATH="/usr/local/share/npm/bin:$PATH"
-fi
