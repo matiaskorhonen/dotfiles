@@ -65,3 +65,6 @@ alias fixairplay="sudo pkill coreaudiod"
 
 # Hexadecimal randomness
 alias rand="openssl rand -hex"
+
+# Create a tunnel and SSH session for rmate
+alias rmate-to="ssh -R 52698:localhost:52698 "
