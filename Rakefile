@@ -5,6 +5,7 @@ require "erb"
 DOTFILES = %w(ackrc gemrc gitignore inputrc irbrc pryrc rvmrc railsrc tm_properties vimrc vim zlogin zprofile zshrc)
 HOME = ENV["HOME"]
 ZSH_CUSTOM = Dir["oh-my-zsh/custom/*"]
+ZSH_CUSTOM_PLUGINS = Dir["oh-my-zsh/custom/plugins/*"]
 
 class String
   def green
@@ -66,6 +67,12 @@ namespace :dotfiles do
     puts "\n=> Installing custom Oh My Zsh scripts"
 
     ZSH_CUSTOM.each do |file|
+      target = File.join(HOME, "." + file)
+      source = File.expand_path(file)
+      symlink_unless_target_exists(source, target)
+    end
+
+    ZSH_CUSTOM_PLUGINS.each do |file|
       target = File.join(HOME, "." + file)
       source = File.expand_path(file)
       symlink_unless_target_exists(source, target)
