@@ -9,11 +9,11 @@ if File.exist?(rails) && ENV['SKIP_RAILS'].nil?
   if Rails.version[0..0] == "2"
     require 'console_app'
     require 'console_with_helpers'
-  elsif Rails.version[0..0] == "3"
+  elsif %w(3 4).include? Rails.version[0..0]
     require 'rails/console/app'
     require 'rails/console/helpers'
   else
-    warn "[WARN] cannot load Rails console commands (Not on Rails2 or Rails3?)"
+    warn "[WARN] cannot load Rails console commands (Not on Rails 2, 3, or 4?)"
   end
 end
 
