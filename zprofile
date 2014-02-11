@@ -2,6 +2,10 @@ export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 
 if [[ -d /Applications/Postgres.app ]] then
   export PATH="/Applications/Postgres.app/Contents/MacOS/bin:$PATH"
+elif [[ -d /Applications/Postgres93.app ]] then
+  export PATH="/Applications/Postgres93.app/Contents/MacOS/bin:$PATH"
+elif [[ -d /Applications/Postgres94.app ]] then
+  export PATH="/Applications/Postgres94.app/Contents/MacOS/bin:$PATH"
 fi
 
 # Amazon CLI tools configuration
