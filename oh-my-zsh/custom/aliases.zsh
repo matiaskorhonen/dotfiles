@@ -41,9 +41,6 @@ alias servethis='python2.6 -m SimpleHTTPServer'
 # commands starting with % for pasting from web
 alias %=' '
 
-# redcar
-alias rc='redcar --fork'
-
 # tree
 alias tree='tree -C' # Turn colorization on always
 
