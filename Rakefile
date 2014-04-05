@@ -2,7 +2,7 @@
 require "fileutils"
 require "erb"
 
-DOTFILES = %w(ackrc gemrc gitignore inputrc irbrc pryrc rvmrc railsrc tm_properties vimrc vim zlogin zprofile zshrc)
+DOTFILES = %w(ackrc gemrc gitignore httpie inputrc irbrc pryrc rvmrc railsrc tm_properties vimrc vim zlogin zprofile zshrc)
 HOME = ENV["HOME"]
 ZSH_CUSTOM = Dir["oh-my-zsh/custom/*"]
 ZSH_CUSTOM_PLUGINS = Dir["oh-my-zsh/custom/plugins/*"]
@@ -63,6 +63,13 @@ namespace :dotfiles do
       source = File.expand_path(file)
       symlink_unless_target_exists(source, target)
     end
+
+    # Special case fot HTTPie
+    # httpie_dir = File.join(HOME, "." + file)
+    # httpie_target = File.join(http_pie_dir, "config.json")
+    # httpie_source = File.expand_path("httpie.json")
+    # FileUtils.mkdir_p(httpie_dir)
+    # symlink_unless_target_exists(httpie_source, httpie_target)
 
     puts "\n=> Installing custom Oh My Zsh scripts"
 
