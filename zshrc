@@ -31,7 +31,7 @@ source $ZSH/oh-my-zsh.sh
 export EDITOR="vim"
 
 # Bundler editor (bundle open GEM)
-export BUNDLER_EDITOR="mate -w"
+export BUNDLER_EDITOR="atom -w"
 
 # Make JRuby default to 1.9 mode
 export JRUBY_OPTS=--1.9
