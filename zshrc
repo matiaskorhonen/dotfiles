@@ -23,7 +23,7 @@ ZSH_THEME="matt"
 DISABLE_COMPLETION_WAITING_DOTS="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-plugins=(brew c cap catimg gem git github iwhois heroku osx rails rvm textmate urltools)
+plugins=(brew c catimg gem git github iwhois heroku osx rails rvm urltools)
 
 source $ZSH/oh-my-zsh.sh
 
