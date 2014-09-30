@@ -29,7 +29,6 @@ alias glog="git log --graph --pretty=tformat:'%Cred%h%Creset -%C(yellow)%d%Crese
 # rails
 alias migrate='rake db:migrate db:test:clone'
 alias r='rails'
-alias pss='passenger start -p 8080'
 
 # Serve the current directory
 alias servethis='python2.6 -m SimpleHTTPServer'
@@ -46,9 +45,6 @@ alias t='tab' # Open a new tab in the same directory
 # spotlight
 alias sc='mdfind -onlyin . ' # Search in the current directory
 alias meta='mdls' # Display file metadata (from Spotlight)
-
-# Sublime Text 2
-alias subl="/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl"
 
 # Less useless listener grabbing on OS X
 alias netlisteners="lsof -i -P | grep LISTEN"
