@@ -35,3 +35,10 @@ export BUNDLER_EDITOR="atom -w"
 
 # Make JRuby default to 1.9 mode
 export JRUBY_OPTS=--1.9
+
+# Add the MySQL stuff to PATH (etc) if it is installed
+MYSQL="/usr/local/mysql/bin"
+if [ -d "$MYSQL" ]; then
+    export PATH=$PATH:$MYSQL
+    export DYLD_LIBRARY_PATH=/usr/local/mysql/lib:$DYLD_LIBRARY_PATH
+fi
