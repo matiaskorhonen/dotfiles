@@ -27,7 +27,7 @@ alias gx='gitx --all'
 alias glog="git log --graph --pretty=tformat:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset %an' --abbrev-commit --date=relative"
 
 # rails
-alias migrate='rake db:migrate db:test:clone'
+alias migrate='rake db:migrate'
 alias r='rails'
 
 # Serve the current directory
@@ -54,9 +54,6 @@ alias fixairplay="sudo pkill coreaudiod"
 
 # Hexadecimal randomness
 alias rand="openssl rand -hex"
-
-# Create a tunnel and SSH session for rmate
-alias rmate-to="ssh -R 52698:localhost:52698 "
 
 # Combine PDFs
 alias joinpdfs="/System/Library/Automator/Combine\ PDF\ Pages.action/Contents/Resources/join.py"
