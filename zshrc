@@ -42,3 +42,9 @@ if [ -d "$MYSQL" ]; then
     export PATH=$PATH:$MYSQL
     export DYLD_LIBRARY_PATH=/usr/local/mysql/lib:$DYLD_LIBRARY_PATH
 fi
+
+# Add the GOROOT-based install location to your PATH
+GOROOT="/usr/local/opt/go/libexec/bin"
+if [ -d "$GOROOT" ]; then
+  export PATH=$PATH:$GOROOT
+fi
