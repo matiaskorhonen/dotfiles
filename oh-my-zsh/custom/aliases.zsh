@@ -57,3 +57,6 @@ alias rand="openssl rand -hex"
 
 # Combine PDFs
 alias joinpdfs="/System/Library/Automator/Combine\ PDF\ Pages.action/Contents/Resources/join.py"
+
+# Get best quality video from iPlayer
+alias iplayer="get_iplayer --modes=best"
