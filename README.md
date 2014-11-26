@@ -15,5 +15,5 @@ installed in `~/.oh-my-zsh`)
   * Especially the `CFLAGS` (which are [GCC and CPU specific](http://en.gentoo-wiki.com/wiki/Safe_Cflags))
 * I don't take responsibility for anything at all
 * If you're going to use these dotfiles, you should probably fork this repo and edit as necessary
-* If you install `git` **and** `zsh` from homebrew, you should make sure to specify the `--without-completions` option (otherwise you get a conflicts)
+* If you install `git` **and** `zsh` from homebrew, you should make sure to specify the `--without-completions` option (otherwise you get conflicts)
   * OS X 10.9 (Mavericks) comes with zsh 5.0.2, so upgrading zsh from homebrew shouldn't be necessary
