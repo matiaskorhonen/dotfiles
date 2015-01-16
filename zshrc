@@ -47,4 +47,6 @@ fi
 GOROOT="/usr/local/opt/go/libexec/bin"
 if [ -d "$GOROOT" ]; then
   export PATH=$PATH:$GOROOT
+  export GOPATH="$HOME/Programming/go"
+  export PATH="$PATH:$GOPATH/bin"
 fi
