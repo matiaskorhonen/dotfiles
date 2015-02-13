@@ -17,4 +17,4 @@ if File.exist?(rails) && ENV['SKIP_RAILS'].nil?
   end
 end
 
-Pry.config.editor = "mate"
+Pry.config.editor = "atom"
