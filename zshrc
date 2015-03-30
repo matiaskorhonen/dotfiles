@@ -36,6 +36,13 @@ export BUNDLER_EDITOR="atom -w"
 # Make JRuby default to 1.9 mode
 export JRUBY_OPTS=--1.9
 
+if [ -d "$HOME/Programming/dokku" ]; then
+  # Configure the Dokku host
+  export DOKKU_HOST="dokku.matias.li"
+  # Dokku alias
+  alias dokku='$HOME/Programming/dokku/contrib/dokku_client.sh'
+fi
+
 # Add the MySQL stuff to PATH (etc) if it is installed
 MYSQL="/usr/local/mysql/bin"
 if [ -d "$MYSQL" ]; then
