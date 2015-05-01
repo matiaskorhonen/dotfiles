@@ -38,7 +38,7 @@ export JRUBY_OPTS=--1.9
 
 if [ -d "$HOME/Programming/dokku" ]; then
   # Configure the Dokku host
-  export DOKKU_HOST="dokku.matias.li"
+  export DOKKU_HOST="anoia.matias.li"
   # Dokku alias
   alias dokku='$HOME/Programming/dokku/contrib/dokku_client.sh'
 fi
