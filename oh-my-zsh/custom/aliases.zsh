@@ -49,9 +49,6 @@ alias meta='mdls' # Display file metadata (from Spotlight)
 # Less useless listener grabbing on OS X
 alias netlisteners="lsof -i -P | grep LISTEN"
 
-# Kill coreaudio to fix AirPlay
-alias fixairplay="sudo pkill coreaudiod"
-
 # Hexadecimal randomness
 alias rand="openssl rand -hex"
 
