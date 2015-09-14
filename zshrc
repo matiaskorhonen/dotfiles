@@ -62,7 +62,6 @@ fi
 AWS_COMPLETION="/usr/local/share/zsh/site-functions/_aws"
 if [ -f "$AWS_COMPLETION" ]; then
   source "$AWS_COMPLETION"
->>>>>>> Adds AWS CLI completion
 fi
 
 if [ -d "/usr/local/share/zsh/help" ]; then
