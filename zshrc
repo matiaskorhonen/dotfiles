@@ -58,6 +58,13 @@ if [ -d "$GOROOT" ]; then
   export PATH="$PATH:$GOPATH/bin"
 fi
 
+# AWS CLI completion
+AWS_COMPLETION="/usr/local/share/zsh/site-functions/_aws"
+if [ -f "$AWS_COMPLETION" ]; then
+  source "$AWS_COMPLETION"
+>>>>>>> Adds AWS CLI completion
+fi
+
 if [ -d "/usr/local/share/zsh/help" ]; then
   unalias run-help
   autoload run-help
