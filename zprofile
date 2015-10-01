@@ -6,6 +6,8 @@ elif [[ -d /Applications/Postgres.app/Contents/Versions/9.3/bin ]] then
   export PATH="/Applications/Postgres.app/Contents/Versions/9.3/bin:$PATH"
 elif [[ -d /Applications/Postgres.app/Contents/Versions/9.4/bin ]] then
   export PATH="/Applications/Postgres.app/Contents/Versions/9.4/bin:$PATH"
+elif [[ -d /Applications/Postgres.app/Contents/Versions/9.5/bin ]] then
+  export PATH="/Applications/Postgres.app/Contents/Versions/9.5/bin:$PATH"
 fi
 
 # Amazon CLI tools configuration
