@@ -1,10 +1,10 @@
 function c() {
-   cd ~/Programming/$1;
+   cd ~/Code/$1;
 }
 
 #compdef c
 function _c () {
-  _files -W ~/Programming -/
+  _files -W ~/Code -/
 }
 
 function h() {
