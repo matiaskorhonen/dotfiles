@@ -18,12 +18,8 @@ alias glff='git pull --ff-only'
 alias gp='git push'
 alias gd='git diff'
 alias gc='git commit'
-alias gca='git commit -a'
 alias gco='git checkout'
-alias gb='git branch'
 alias gs='git status'
-alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
-alias gx='gitx --all'
 alias glog="git log --graph --pretty=tformat:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset %an' --abbrev-commit --date=relative"
 
 # rails
