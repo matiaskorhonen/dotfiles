@@ -12,7 +12,7 @@ installed in `~/.oh-my-zsh`)
 ## Caveats
 
 * Some of the configuration (e.g. the [RVM](https://rvm.io/) configuration in .rvmrc) might be specific to my set-up.
-  * Especially the `CFLAGS` (which are [GCC and CPU specific](http://en.gentoo-wiki.com/wiki/Safe_Cflags))
+  * Especially the `CFLAGS` (which are [GCC and CPU specific](https://wiki.gentoo.org/wiki/Safe_CFLAGS))
 * I don't take responsibility for anything at all
 * If you're going to use these dotfiles, you should probably fork this repo and edit as necessary
 * If you install `git` **and** `zsh` from homebrew, you should make sure to specify the `--without-completions` option (otherwise you get conflicts)
