@@ -23,7 +23,7 @@ ZSH_THEME="matt"
 DISABLE_COMPLETION_WAITING_DOTS="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-plugins=(brew c catimg gem iwhois golang heroku osx pod rails rvm urltools)
+plugins=(brew c catimg gem iwhois github golang heroku osx pod rails rvm urltools)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -61,4 +61,11 @@ if [ -d "/usr/local/share/zsh/help" ]; then
   unalias run-help
   autoload run-help
   HELPDIR=/usr/local/share/zsh/help
+fi
+
+# Homebrew installs zsh completion definitions to
+#  /usr/local/share/zsh/site-functions, which on $FPATH for the
+# Homebrew-installed zsh, but not for the system zsh.
+if (( ! ${fpath[(I)/usr/local/share/zsh/site-functions]} )); then
+  FPATH=/usr/local/share/zsh/site-functions:$FPATH
 fi
