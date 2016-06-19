@@ -51,3 +51,5 @@ alias rand="openssl rand -hex"
 # Combine PDFs
 alias joinpdfs="/System/Library/Automator/Combine\ PDF\ Pages.action/Contents/Resources/join.py"
 
+# ngrok tunnel with a long, random subdomain, over HTTPS only
+alias ngroksec="ngrok http -bind-tls=true -subdomain `rand 16`"
