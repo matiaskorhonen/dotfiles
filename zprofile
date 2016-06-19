@@ -28,3 +28,9 @@ fi
 export PATH="/usr/local/heroku/bin:$PATH"
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+# Google Cloud CLI tools
+if [ -f /Users/matt/.gcloud/google-cloud-sdk/completion.zsh.inc ]; then
+  source /Users/matt/.gcloud/google-cloud-sdk/path.zsh.inc
+  source /Users/matt/.gcloud/google-cloud-sdk/completion.zsh.inc
+fi
