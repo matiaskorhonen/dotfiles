@@ -22,8 +22,6 @@ ZSH_THEME="matt"
 # Uncomment following line if you want disable red dots displayed while waiting for completion
 DISABLE_COMPLETION_WAITING_DOTS="true"
 
-export HOMEBREW_NO_ANALYTICS=1
-
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 plugins=(brew c catimg gem iplayer iwhois github golang heroku osx pod rails rvm urltools)
 

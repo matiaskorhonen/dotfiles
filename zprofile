@@ -1,3 +1,5 @@
+export HOMEBREW_NO_ANALYTICS=1
+
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 
 if [[ -d /Applications/Postgres.app/Contents/MacOS/bin ]] then
@@ -42,4 +44,3 @@ if test -f ~/.gnupg/.gpg-agent-info -a -n "$(pgrep gpg-agent)"; then
 else
   eval $(gpg-agent --daemon --write-env-file ~/.gnupg/.gpg-agent-info)
 fi
-
