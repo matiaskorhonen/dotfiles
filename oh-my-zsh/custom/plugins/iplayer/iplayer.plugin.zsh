@@ -3,7 +3,6 @@ function iplayer() {
   if [ -z "$1" ]
   then
     echo "Usage: iplayer URL ..."
-    exit 1
   fi
 
   for var in "$@"
