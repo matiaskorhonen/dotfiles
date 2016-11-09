@@ -53,3 +53,6 @@ alias joinpdfs="/System/Library/Automator/Combine\ PDF\ Pages.action/Contents/Re
 
 # ngrok tunnel with a long, random subdomain, over HTTPS only
 alias ngroksec="ngrok http -bind-tls=true -subdomain `rand 16`"
+
+# https://github.com/alexjc/neural-enhance
+alias enhance='function ne() { docker run --rm -v "$(pwd)/`dirname ${@:$#}`":/ne/input -it alexjc/neural-enhance ${@:1:-1} "input/`basename ${@:$#}`"; }; ne'
