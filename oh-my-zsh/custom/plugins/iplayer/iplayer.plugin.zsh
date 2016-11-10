@@ -7,6 +7,6 @@ function iplayer() {
 
   for var in "$@"
   do
-    get_iplayer --modes=best --output=$HOME/Downloads "$var"
+    get_iplayer --output=$HOME/Downloads "$var"
   done
 }
