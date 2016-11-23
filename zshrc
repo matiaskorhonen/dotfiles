@@ -57,11 +57,6 @@ if [ -f "$AWS_COMPLETION" ]; then
   source "$AWS_COMPLETION"
 fi
 
-# Add Yarn to PATH if it's installed
-if [ -d "$HOME/.yarn/bin" ]; then
-  export PATH="$HOME/.yarn/bin:$PATH"
-fi
-
 if [ -d "/usr/local/share/zsh/help" ]; then
   unalias run-help
   autoload run-help
