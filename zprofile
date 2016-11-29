@@ -39,3 +39,8 @@ if test -f ~/.gnupg/.gpg-agent-info -a -n "$(pgrep gpg-agent)"; then
 else
   eval $(gpg-agent --daemon --write-env-file ~/.gnupg/.gpg-agent-info)
 fi
+
+# Yarn
+if yarn --version > /dev/null 2>&1; then
+  export PATH="$PATH:`yarn global bin`"
+fi
