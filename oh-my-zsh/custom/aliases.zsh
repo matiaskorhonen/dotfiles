@@ -54,5 +54,9 @@ alias joinpdfs="/System/Library/Automator/Combine\ PDF\ Pages.action/Contents/Re
 # ngrok tunnel with a long, random subdomain, over HTTPS only
 alias ngroksec="ngrok http -bind-tls=true -subdomain `rand 16`"
 
+# https://www.ipify.org/
+# Silly complicated just to get a newline at the end of the output...
+alias ip='function ipify() { echo $(curl -s https://api.ipify.org) }; ipify'
+
 # https://github.com/alexjc/neural-enhance
 alias enhance='function ne() { docker run --rm -v "$(pwd)/`dirname ${@:$#}`":/ne/input -it alexjc/neural-enhance ${@:1:-1} "input/`basename ${@:$#}`"; }; ne'
