@@ -31,10 +31,7 @@ source $ZSH/oh-my-zsh.sh
 export EDITOR="vim"
 
 # Bundler editor (bundle open GEM)
-export BUNDLER_EDITOR="atom"
-
-# Make JRuby default to 1.9 mode
-export JRUBY_OPTS=--1.9
+export BUNDLER_EDITOR="code"
 
 # Add the MySQL stuff to PATH (etc) if it is installed
 MYSQL="/usr/local/mysql/bin"

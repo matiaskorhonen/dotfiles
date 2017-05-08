@@ -60,3 +60,5 @@ alias ip='function ipify() { echo $(curl -s https://api.ipify.org) }; ipify'
 
 # https://github.com/alexjc/neural-enhance
 alias enhance='function ne() { docker run --rm -v "$(pwd)/`dirname ${@:$#}`":/ne/input -it alexjc/neural-enhance ${@:1:-1} "input/`basename ${@:$#}`"; }; ne'
+
+alias atom="code"
