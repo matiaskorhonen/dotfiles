@@ -27,20 +27,19 @@ export PATH="/usr/local/heroku/bin:$PATH"
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 # Google Cloud CLI tools
-if [ -f /Users/matt/.gcloud/google-cloud-sdk/completion.zsh.inc ]; then
-  source /Users/matt/.gcloud/google-cloud-sdk/path.zsh.inc
-  source /Users/matt/.gcloud/google-cloud-sdk/completion.zsh.inc
-fi
-
-# GPG Agent stuff
-if test -f ~/.gnupg/.gpg-agent-info -a -n "$(pgrep gpg-agent)"; then
-  source ~/.gnupg/.gpg-agent-info
-  export GPG_AGENT_INFO
-else
-  eval $(gpg-agent --daemon --write-env-file ~/.gnupg/.gpg-agent-info)
+if [ -f "${HOME}/.gcloud/google-cloud-sdk/completion.zsh.inc" ]; then
+  source ${HOME}/.gcloud/google-cloud-sdk/path.zsh.inc
+  source ${HOME}/.gcloud/google-cloud-sdk/completion.zsh.inc
 fi
 
 # Yarn
 if yarn --version > /dev/null 2>&1; then
   export PATH="$PATH:`yarn global bin`"
+fi
+
+# Android
+if [[ -d "${HOME}/Library/Android/sdk" ]] then
+  export ANDROID_HOME=${HOME}/Library/Android/sdk
+  export PATH=${PATH}:${ANDROID_HOME}/tools
+  export PATH=${PATH}:${ANDROID_HOME}/platform-tools
 fi
