@@ -17,13 +17,6 @@ if [ -f $HOME/.ec2/ ]; then
   export EC2_CERT="$(/bin/ls $HOME/.ec2/cert-*.pem)"
 fi
 
-if [[ -d /usr/local/share/npm/bin ]] then
-  export PATH="/usr/local/share/npm/bin:$PATH"
-fi
-
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
-
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 # Google Cloud CLI tools
@@ -32,15 +25,13 @@ if [ -f "${HOME}/.gcloud/google-cloud-sdk/completion.zsh.inc" ]; then
   source ${HOME}/.gcloud/google-cloud-sdk/completion.zsh.inc
 fi
 
-# Yarn
-if yarn --version > /dev/null 2>&1; then
-  export PATH="$PATH:`yarn global bin`"
-fi
-
 # Android
-if [[ -d "${HOME}/Library/Android/sdk" ]] then
-  export ANDROID_HOME=${HOME}/Library/Android/sdk
+export ANDROID_SDK_ROOT="$HOME/Library/Android/sdk"
+if [[ -d "${ANDROID_SDK_ROOT}" ]] then
+  export ANDROID_HOME=${ANDROID_SDK_ROOT}
   export PATH=${PATH}:${ANDROID_HOME}/tools
+  export PATH=$PATH:$ANDROID_SDK_ROOT/tools/bin
   export PATH=${PATH}:${ANDROID_HOME}/platform-tools
 fi
+
 export GPG_TTY=$(tty)
