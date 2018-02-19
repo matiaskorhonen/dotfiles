@@ -6,9 +6,9 @@ alias ccat='pygmentize -O style=native -f console256 -g'
 alias ..='cd ..'
 
 # ls
-alias ls="ls -F"
-alias l="ls -lAh"
-alias ll="ls -l"
+alias ls='ls -F'
+alias l='ls -lAh'
+alias ll='ls -l'
 alias la='ls -A'
 
 # git
@@ -21,13 +21,15 @@ alias gc='git commit'
 alias gco='git checkout'
 alias gs='git status'
 alias glog="git log --graph --pretty=tformat:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset %an' --abbrev-commit --date=relative"
+alias tower='gittower'
+alias github='gittower .'
 
 # rails
 alias migrate='rake db:migrate'
 alias r='rails'
 
 # Serve the current directory
-alias servethis='python2.6 -m SimpleHTTPServer'
+alias servethis='python -m SimpleHTTPServer'
 
 # commands starting with % for pasting from web
 alias %=' '
@@ -43,16 +45,13 @@ alias sc='mdfind -onlyin . ' # Search in the current directory
 alias meta='mdls' # Display file metadata (from Spotlight)
 
 # Less useless listener grabbing on OS X
-alias netlisteners="lsof -i -P | grep LISTEN"
+alias netlisteners='lsof -i -P | grep LISTEN'
 
 # Hexadecimal randomness
-alias rand="openssl rand -hex"
+alias rand='openssl rand -hex'
 
 # Combine PDFs
-alias joinpdfs="/System/Library/Automator/Combine\ PDF\ Pages.action/Contents/Resources/join.py"
-
-# ngrok tunnel with a long, random subdomain, over HTTPS only
-alias ngroksec="ngrok http -bind-tls=true -subdomain `rand 16`"
+alias joinpdfs='/System/Library/Automator/Combine\ PDF\ Pages.action/Contents/Resources/join.py'
 
 # https://www.ipify.org/
 # Silly complicated just to get a newline at the end of the output...

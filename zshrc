@@ -31,7 +31,7 @@ source $ZSH/oh-my-zsh.sh
 export EDITOR="vim"
 
 # Bundler editor (bundle open GEM)
-export BUNDLER_EDITOR="code"
+export BUNDLER_EDITOR="atom"
 
 # Add the MySQL stuff to PATH (etc) if it is installed
 MYSQL="/usr/local/mysql/bin"
@@ -60,6 +60,11 @@ if [ -d "/usr/local/share/zsh/help" ]; then
   HELPDIR=/usr/local/share/zsh/help
 fi
 
+export ANDROID_SDK_ROOT="$HOME/Library/Android/sdk"
+if [ -d "$ANDROID_SDK_ROOT/tools/bin" ]; then
+  export PATH="$PATH:$ANDROID_SDK_ROOT/tools/bin"
+fi
+
 # Homebrew installs zsh completion definitions to
 #  /usr/local/share/zsh/site-functions, which on $FPATH for the
 # Homebrew-installed zsh, but not for the system zsh.
@@ -71,3 +76,7 @@ test -e ${HOME}/.iterm2_shell_integration.zsh && source ${HOME}/.iterm2_shell_in
 
 # added by travis gem
 [ -f ${HOME}/.travis/travis.sh ] && source ${HOME}/.travis/travis.sh
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

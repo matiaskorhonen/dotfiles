@@ -43,3 +43,4 @@ if [[ -d "${HOME}/Library/Android/sdk" ]] then
   export PATH=${PATH}:${ANDROID_HOME}/tools
   export PATH=${PATH}:${ANDROID_HOME}/platform-tools
 fi
+export GPG_TTY=$(tty)
