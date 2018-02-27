@@ -1,12 +1,20 @@
-Matt's dot files
-================
+# Matt's dot files
 
 Just my dot files. Use them if you can...
 
 ## Installation
 
+Clone the repository and submodules:
+
+```sh
+git clone git@github.com:matiaskorhonen/dotfiles.git
+# or git clone https://github.com/matiaskorhonen/dotfiles.git
+git submodule init
+git submodule update
+```
+
 There's a Rake task that you can use to install the appropriate symlinks, but
-it's pretty crude and assumes some things (for example that Oh My Zsh is
+it's pretty crude and makes some assumptions (for example that Oh My Zsh is
 installed in `~/.oh-my-zsh`)
 
 ## Caveats
