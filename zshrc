@@ -23,7 +23,7 @@ ZSH_THEME="matt"
 DISABLE_COMPLETION_WAITING_DOTS="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-plugins=(brew c catimg gem iplayer iwhois github golang heroku osx pod rails rails_custom rvm urltools)
+plugins=(brew c catimg gem github golang heroku iplayer iwhois osx pod rails rails_custom rvm urltools zsh-nvm)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -71,7 +71,3 @@ test -e ${HOME}/.iterm2_shell_integration.zsh && source ${HOME}/.iterm2_shell_in
 
 # added by travis gem
 [ -f ${HOME}/.travis/travis.sh ] && source ${HOME}/.travis/travis.sh
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
