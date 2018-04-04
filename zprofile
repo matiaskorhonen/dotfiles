@@ -35,3 +35,6 @@ if [[ -d "${ANDROID_SDK_ROOT}" ]] then
 fi
 
 export GPG_TTY=$(tty)
+
+# qt (for capybara-webkit)
+export PATH="$(brew --prefix qt@5.5)/bin:$PATH"
