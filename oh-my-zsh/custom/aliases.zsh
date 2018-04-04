@@ -29,7 +29,7 @@ alias migrate='rake db:migrate'
 alias r='rails'
 
 # Serve the current directory
-alias servethis='python -m SimpleHTTPServer'
+alias servethis='python -m http.server'
 
 # commands starting with % for pasting from web
 alias %=' '
