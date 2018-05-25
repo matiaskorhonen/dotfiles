@@ -23,7 +23,7 @@ ZSH_THEME="matt"
 DISABLE_COMPLETION_WAITING_DOTS="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-plugins=(brew c catimg gem github golang heroku iplayer iwhois osx pod rails rails_custom rvm urltools zsh-nvm)
+plugins=(brew c catimg gem github golang heroku osx pod rails rails_custom rvm urltools zsh-nvm)
 
 source $ZSH/oh-my-zsh.sh
 
