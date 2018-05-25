@@ -15,6 +15,9 @@ Icon?
 
 .*
 !.gitignore
+!.ruby-version
+!.keep
+!.rspec
 *~
 *.sw[a-p]
 
