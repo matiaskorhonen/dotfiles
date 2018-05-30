@@ -22,7 +22,6 @@ alias gco='git checkout'
 alias gs='git status'
 alias glog="git log --graph --pretty=tformat:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset %an' --abbrev-commit --date=relative"
 alias tower='gittower'
-alias github='gittower .'
 
 # rails
 alias migrate='rake db:migrate'
@@ -56,6 +55,3 @@ alias joinpdfs='/System/Library/Automator/Combine\ PDF\ Pages.action/Contents/Re
 # https://www.ipify.org/
 # Silly complicated just to get a newline at the end of the output...
 alias ip='function ipify() { echo $(curl -s https://api.ipify.org) }; ipify'
-
-# https://github.com/alexjc/neural-enhance
-alias enhance='function ne() { docker run --rm -v "$(pwd)/`dirname ${@:$#}`":/ne/input -it alexjc/neural-enhance ${@:1:-1} "input/`basename ${@:$#}`"; }; ne'
