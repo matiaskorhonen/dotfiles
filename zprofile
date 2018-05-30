@@ -20,9 +20,9 @@ fi
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 # Google Cloud CLI tools
-if [ -f "${HOME}/.gcloud/google-cloud-sdk/completion.zsh.inc" ]; then
-  source ${HOME}/.gcloud/google-cloud-sdk/path.zsh.inc
-  source ${HOME}/.gcloud/google-cloud-sdk/completion.zsh.inc
+if [ -f "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc" ]; then
+  source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
+  source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
 fi
 
 # Android
