@@ -25,7 +25,7 @@ DISABLE_COMPLETION_WAITING_DOTS="true"
 export NVM_LAZY_LOAD=true
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-plugins=(c gem github golang osx pod rails rails_custom rvm urltools zsh-nvm)
+plugins=(c gem github golang iterm2-ssh osx pod rails rails_custom rvm urltools zsh-nvm)
 
 source $ZSH/oh-my-zsh.sh
 

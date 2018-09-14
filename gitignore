@@ -18,6 +18,8 @@ Icon?
 !.ruby-version
 !.keep
 !.rspec
+!.babelrc
+!.postcssrc.yml
 *~
 *.sw[a-p]
 
@@ -57,6 +59,6 @@ DerivedData
 *.xcuserstate
 
 
-### Log rotated development logs (https://gist.github.com/k33l0r/5012502)
+### Log rotated development logs (https://gist.github.com/matiaskorhonen/5012502)
 
 log/*.log.*
