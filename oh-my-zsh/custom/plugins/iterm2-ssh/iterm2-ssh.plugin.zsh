@@ -24,3 +24,11 @@ function ssh() {
     fi
     command ssh "$@"
 }
+
+function heroku() {
+  if [[ "$@" =~ "console*" || "$@" =~ "run bash*" ]]; then
+    trap "tab-reset" INT EXIT
+    tabc SSH
+  fi
+  command heroku "$@"
+}
