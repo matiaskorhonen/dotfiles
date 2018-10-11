@@ -1,5 +1,5 @@
 function c() {
-   cd ~/Code/$1;
+  cd ~/Code/$1;
 }
 
 #compdef c
@@ -8,7 +8,7 @@ function _c () {
 }
 
 function h() {
-   cd ~/$1;
+  cd ~/$1;
 }
 
 #compdef h
