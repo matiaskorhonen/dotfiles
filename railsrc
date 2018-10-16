@@ -1,1 +1,1 @@
--T --database=postgresql
+--skip-test --database=postgresql --skip-coffee
