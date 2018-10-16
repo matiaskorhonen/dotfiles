@@ -41,3 +41,6 @@ export PATH="$(brew --prefix qt@5.5)/bin:$PATH"
 
 USER_BASE_PATH=$(python -m site --user-base)
 export PATH="$PATH:$USER_BASE_PATH/bin"
+
+# Spring STAAAAHTP
+export DISABLE_SPRING="true"
