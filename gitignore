@@ -13,15 +13,15 @@ Icon?
 
 ### Linux
 
-.*
-!.gitignore
-!.ruby-version
-!.keep
-!.rspec
-!.babelrc
-!.postcssrc.yml
-*~
-*.sw[a-p]
+# .*
+# !.gitignore
+# !.ruby-version
+# !.keep
+# !.rspec
+# !.babelrc
+# !.postcssrc.yml
+# *~
+# *.sw[a-p]
 
 # KDE
 .directory
