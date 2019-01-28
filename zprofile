@@ -37,7 +37,7 @@ fi
 export GPG_TTY=$(tty)
 
 # qt (for capybara-webkit)
-export PATH="$(brew --prefix qt@5.5)/bin:$PATH"
+# export PATH="$(brew --prefix qt@5.5)/bin:$PATH"
 
 USER_BASE_PATH=$(python -m site --user-base)
 export PATH="$PATH:$USER_BASE_PATH/bin"
