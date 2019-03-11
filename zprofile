@@ -44,3 +44,8 @@ export PATH="$PATH:$USER_BASE_PATH/bin"
 
 # Spring STAAAAHTP
 export DISABLE_SPRING="true"
+
+# Enable pyenv
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
