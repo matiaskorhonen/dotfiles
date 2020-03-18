@@ -55,3 +55,6 @@ alias joinpdfs='/System/Library/Automator/Combine\ PDF\ Pages.action/Contents/Re
 # https://www.ipify.org/
 # Silly complicated just to get a newline at the end of the output...
 alias ip='function ipify() { echo $(curl -s https://api.ipify.org) }; ipify'
+
+# Launch VS Code instead of Atom
+alias atom='code'
