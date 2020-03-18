@@ -1,3 +1,5 @@
+export LC_ALL=en_US.UTF-8
+
 export HOMEBREW_NO_ANALYTICS=1
 
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
@@ -8,7 +10,9 @@ if [[ -d /Applications/Postgres.app/Contents/Versions ]] then
 fi
 
 # Amazon CLI tools configuration
-export JAVA_HOME="$(/usr/libexec/java_home)"
+if [ -f "/usr/libexec/java_home" ]; then
+  export JAVA_HOME="$(/usr/libexec/java_home)"
+fi
 export AWS_IAM_HOME="/usr/local/opt/aws-iam-tools/jars"
 export AWS_CREDENTIAL_FILE=$HOME/.aws-credentials-master
 
@@ -36,16 +40,9 @@ fi
 
 export GPG_TTY=$(tty)
 
-# qt (for capybara-webkit)
-# export PATH="$(brew --prefix qt@5.5)/bin:$PATH"
-
 USER_BASE_PATH=$(python -m site --user-base)
 export PATH="$PATH:$USER_BASE_PATH/bin"
 
 # Spring STAAAAHTP
 export DISABLE_SPRING="true"
 
-# Enable pyenv
-if command -v pyenv 1>/dev/null 2>&1; then
-  eval "$(pyenv init -)"
-fi
