@@ -9,18 +9,6 @@ if [[ -d /Applications/Postgres.app/Contents/Versions ]] then
   export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"
 fi
 
-# Amazon CLI tools configuration
-if [ -f "/usr/libexec/java_home" ]; then
-  export JAVA_HOME="$(/usr/libexec/java_home)"
-fi
-export AWS_IAM_HOME="/usr/local/opt/aws-iam-tools/jars"
-export AWS_CREDENTIAL_FILE=$HOME/.aws-credentials-master
-
-if [ -f $HOME/.ec2/ ]; then
-  export EC2_PRIVATE_KEY="$(/bin/ls $HOME/.ec2/pk-*.pem)"
-  export EC2_CERT="$(/bin/ls $HOME/.ec2/cert-*.pem)"
-fi
-
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 # Google Cloud CLI tools
@@ -45,4 +33,3 @@ export PATH="$PATH:$USER_BASE_PATH/bin"
 
 # Spring STAAAAHTP
 export DISABLE_SPRING="true"
-
