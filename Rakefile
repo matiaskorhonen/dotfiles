@@ -4,6 +4,7 @@ require "erb"
 
 DOTFILES = %w(ackrc gemrc get_iplayer gitignore httpie inputrc irbrc pryrc rvmrc railsrc tm_properties vimrc vim zlogin zprofile zshrc)
 HOME = ENV["HOME"]
+ZSH_CUSTOM_SCRIPTS = Dir["oh-my-zsh/custom/*.zsh"]
 ZSH_CUSTOM_THEMES = Dir["oh-my-zsh/custom/themes/*"]
 ZSH_CUSTOM_PLUGINS = Dir["oh-my-zsh/custom/plugins/*"]
 
@@ -72,6 +73,12 @@ namespace :dotfiles do
     # symlink_unless_target_exists(httpie_source, httpie_target)
 
     puts "\n=> Installing Oh My Zsh customizations"
+
+    ZSH_CUSTOM_SCRIPTS.each do |file|
+      target = File.join(HOME, "." + file)
+      source = File.expand_path(file)
+      symlink_unless_target_exists(source, target)
+    end
 
     [ZSH_CUSTOM_THEMES, ZSH_CUSTOM_PLUGINS].each do |customizations|
       customizations.each do |file|
