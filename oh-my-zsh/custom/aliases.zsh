@@ -21,7 +21,6 @@ alias gc='git commit'
 alias gco='git checkout'
 alias gs='git status'
 alias glog="git log --graph --pretty=tformat:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset %an' --abbrev-commit --date=relative"
-alias tower='gittower'
 
 # rails
 alias migrate='rake db:migrate'
