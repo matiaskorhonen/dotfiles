@@ -40,8 +40,8 @@ def git_config
   @git_config ||= {
     :name => git_config_value("user.name"),
     :email => git_config_value("user.email"),
-    :github_user => git_config_value("github.user"),
-    :github_token => git_config_value("github.token")
+    :work_email => git_config_value("user.email"),
+    :signingkey => git_config_value("user.signingkey")
   }
 end
 
@@ -99,7 +99,6 @@ namespace :dotfiles do
         puts "=> OK, the existing .gitconfig will be left in place."
         false
       end
-
     end
 
     if override || !File.exists?("#{HOME}/.gitconfig")
@@ -109,14 +108,33 @@ namespace :dotfiles do
       print "  Git email [#{git_config[:email]}]: "
       email = existing_or_new_value(:email)
 
-      print "  GitHub user [#{git_config[:github_user]}]: "
-      github_user = existing_or_new_value(:github_user)
-
-      print "  GitHub token [#{git_config[:github_token]}]: "
-      github_token = existing_or_new_value(:github_token)
+      print "  GPG key ID [#{git_config[:signingkey]}]: "
+      signingkey = existing_or_new_value(:signingkey)
 
       File.open(File.join(HOME, ".gitconfig"), "w") do |f|
         template = File.read(File.expand_path("gitconfig.erb"))
+        f.write ERB.new(template).result(binding)
+      end
+    end
+
+    puts "\n=> Installing .gitconfig_work"
+    if File.exists? "#{HOME}/.gitconfig_work"
+      print "  ~/.gitconfig_work already exists, do you want to overwrite it ? [yN] "
+
+      override = if $stdin.gets.chomp.downcase == "y"
+        true
+      else
+        puts "=> OK, the existing .gitconfig_work will be left in place."
+        false
+      end
+    end
+
+    if override || !File.exists?("#{HOME}/.gitconfig_work")
+      print "  Git work email [#{git_config[:email]}]: "
+      work_email = existing_or_new_value(:work_email)
+
+      File.open(File.join(HOME, ".gitconfig_work"), "w") do |f|
+        template = File.read(File.expand_path("gitconfig_work.erb"))
         f.write ERB.new(template).result(binding)
       end
     end
