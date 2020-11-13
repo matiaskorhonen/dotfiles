@@ -130,7 +130,7 @@ namespace :dotfiles do
     end
 
     if override || !File.exists?("#{HOME}/.gitconfig_work")
-      print "  Git work email [#{git_config[:email]}]: "
+      print "  Git work email [#{git_config[:work_email]}]: "
       work_email = existing_or_new_value(:work_email)
 
       File.open(File.join(HOME, ".gitconfig_work"), "w") do |f|
