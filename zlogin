@@ -9,7 +9,7 @@ export CLICOLOR=1
 setopt prompt_subst
 
 # fnm
-eval "$(fnm env --multi)"
+eval "$(fnm env)"
 
 # rbenv
 export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
