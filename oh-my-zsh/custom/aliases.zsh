@@ -27,7 +27,7 @@ alias migrate='rake db:migrate'
 alias r='rails'
 
 # Serve the current directory
-alias servethis='python -m http.server'
+alias servethis='ruby -run -ehttpd . -p8080'
 
 # commands starting with % for pasting from web
 alias %=' '
