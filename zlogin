@@ -14,3 +14,5 @@ eval "$(fnm env --use-on-cd)"
 # rbenv
 export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
 eval "$(rbenv init -)"
+
+export FASTLANE_USER="me@matiaskorhonen.fi"
