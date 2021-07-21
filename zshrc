@@ -22,8 +22,6 @@ ZSH_THEME="matt"
 # Uncomment following line if you want disable red dots displayed while waiting for completion
 DISABLE_COMPLETION_WAITING_DOTS="true"
 
-export NVM_LAZY_LOAD=true
-
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 plugins=(c checkcert gem github golang iterm2-ssh osx pod rails rails_custom rvm tag tower urltools)
 
