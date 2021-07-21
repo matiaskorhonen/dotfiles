@@ -57,3 +57,6 @@ alias ip='function ipify() { echo $(curl -s https://api.ipify.org) }; ipify'
 
 # Launch VS Code instead of Atom
 alias atom='code'
+
+alias statusbarmagic='xcrun simctl status_bar booted override --time 9:41 --dataNetwork wifi --wifiMode active --wifiBars 3 --cellularMode active --cellularBars 4 --batteryState charged --batteryLevel 100'
+alias statusbarmagicundo='xcrun simctl status_bar booted override --time 9:41 --dataNetwork wifi --wifiMode active --wifiBars 3 --cellularMode active --cellularBars 4 --batteryState charged --batteryLevel 100'
