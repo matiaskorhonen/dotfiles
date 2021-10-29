@@ -5,7 +5,7 @@ rails = File.join Dir.getwd, 'config', 'environment.rb'
 
 if File.exist?(rails) && ENV['SKIP_RAILS'].nil?
   require rails
-  
+
   if Rails.version[0..0] == "2"
     require 'console_app'
     require 'console_with_helpers'
@@ -17,4 +17,8 @@ if File.exist?(rails) && ENV['SKIP_RAILS'].nil?
   end
 end
 
-Pry.config.editor = "atom"
+if defined?(Rails) && Rails.env
+  extend Rails::ConsoleMethods
+end
+
+Pry.config.editor = "code"
