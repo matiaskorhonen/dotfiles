@@ -1,3 +1,6 @@
 /get_iplayer/cookies.*
 /get_iplayer/download_history
 /get_iplayer/*.cache
+
+# Secrets and machine specific configuration
+/zlogin

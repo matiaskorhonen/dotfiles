@@ -22,6 +22,13 @@ class String
   end
 end
 
+def create_unless_source_exists(source)
+  unless File.exists?(source)
+    puts "Creating: \t".green + "#{source}".cyan
+    FileUtils.touch(source)
+  end
+end
+
 def symlink_unless_target_exists(source, target)
   if File.exists?(target)
     type = File.ftype(target)
@@ -62,6 +69,7 @@ namespace :dotfiles do
     DOTFILES.each do |file|
       target = File.join(HOME, "." + file)
       source = File.expand_path(file)
+      create_unless_source_exists(source)
       symlink_unless_target_exists(source, target)
     end
 
