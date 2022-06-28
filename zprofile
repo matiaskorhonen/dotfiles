@@ -30,7 +30,7 @@ fi
 export GPG_TTY=$(tty)
 
 # Add Python scripts to the path
-USER_BASE_PATH=$(python -m site --user-base)
+USER_BASE_PATH=$(python3 -m site --user-base)
 export PATH="$PATH:$USER_BASE_PATH/bin"
 
 # Spring STAAAAHTP
