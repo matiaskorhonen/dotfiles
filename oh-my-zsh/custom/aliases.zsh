@@ -1,6 +1,6 @@
 # "cat"
 # sudo easy_install Pygments
-alias ccat='pygmentize -O style=native -f console256 -g'
+alias ccat='bat --language html --paging=never --style=plain --theme=OneHalfDark'
 
 # cd
 alias ..='cd ..'
