@@ -46,11 +46,15 @@ export CLICOLOR=1
 # expand functions in the prompt
 setopt prompt_subst
 
-# fnm
-eval "$(fnm env --use-on-cd)"
-
 # Add RVM to PATH for scripting
 export PATH="$PATH:$HOME/.rvm/bin"
+
+# Homebrew
+eval "$(/opt/homebrew/bin/brew shellenv)"
+FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+
+# fnm
+eval "$(fnm env --use-on-cd)"
 
 # rbenv
 export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
