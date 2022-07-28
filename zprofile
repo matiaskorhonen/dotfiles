@@ -3,9 +3,6 @@ export LC_ALL=en_US.UTF-8
 # Disable Homebrew analytics
 export HOMEBREW_NO_ANALYTICS=1
 
-# Add Homebrew bins to the beginning of PATH
-export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
-
 # Postgres.app CLI tools
 if [[ -d /Applications/Postgres.app/Contents/Versions ]] then
   export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"
@@ -55,8 +52,15 @@ setopt prompt_subst
 export PATH="$PATH:$HOME/.rvm/bin"
 
 # Homebrew
-eval "$(/opt/homebrew/bin/brew shellenv)"
+if [[ -f /opt/homebrew/bin/brew ]]; then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+else
+  eval "$(/usr/local/bin/brew shellenv)"
+fi
 FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+
+# Add Homebrew bins to the beginning of PATH
+export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 
 # fnm
 eval "$(fnm env --use-on-cd)"
