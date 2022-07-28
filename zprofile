@@ -11,6 +11,11 @@ if [[ -d /Applications/Postgres.app/Contents/Versions ]] then
   export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"
 fi
 
+# Cargo binaries
+if [[ -d /Users/matt/.cargo/bin ]] then
+  export PATH="/Users/matt/.cargo/bin:$PATH"
+fi
+
 # Google Cloud CLI tools
 if [ -f "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc" ]; then
   source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
