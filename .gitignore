@@ -2,5 +2,7 @@
 /get_iplayer/download_history
 /get_iplayer/*.cache
 
+/httpie/version_info.json
+
 # Secrets and machine specific configuration
 /zlogin
