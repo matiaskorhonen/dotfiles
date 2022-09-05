@@ -20,11 +20,11 @@ if [ -f "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion
 fi
 
 # Android tooling
-export ANDROID_SDK_ROOT="$HOME/Library/Android/sdk"
-if [[ -d "${ANDROID_SDK_ROOT}" ]] then
-  export ANDROID_HOME=${ANDROID_SDK_ROOT}
+export ANDROID_SDK="$HOME/Library/Android/sdk"
+if [[ -d "${ANDROID_SDK}" ]] then
+  export ANDROID_HOME=${ANDROID_SDK}
   export PATH=${PATH}:${ANDROID_HOME}/tools
-  export PATH=$PATH:$ANDROID_SDK_ROOT/tools/bin
+  export PATH=$PATH:$ANDROID_SDK/tools/bin
   export PATH=${PATH}:${ANDROID_HOME}/platform-tools
 fi
 
