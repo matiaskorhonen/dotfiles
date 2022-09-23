@@ -22,6 +22,10 @@ alias gco='git checkout'
 alias gs='git status'
 alias glog="git log --graph --pretty=tformat:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset %an' --abbrev-commit --date=relative"
 
+# convert git remote HTTPS ↔︎ SSH
+alias git-remote-to-https="git remote set-url origin https://github.com/$(git remote get-url origin | sed 's/https:\/\/github.com\///' | sed 's/git@github.com://')"
+alias git-remote-to-ssh="git remote set-url origin git@github.com:$(git remote get-url origin | sed 's/https:\/\/github.com\///' | sed 's/git@github.com://')"
+
 # rails
 alias migrate='rake db:migrate'
 alias r='rails'
