@@ -1,21 +1,19 @@
 [color]
-	diff = auto
-	status = auto
-	branch = auto
-	interactive = auto
+  diff = auto
+  status = auto
+  branch = auto
+  interactive = auto
 [user]
-	name = <%= name %>
-	email = <%= email %>
-	signingkey = <%= signingkey %>
-[includeIF "gitdir:~/Code/work/"]
-  path = ~/.gitconfig_work
+  name = <%= name %>
+  email = <%= email %>
+  signingkey = <%= signingkey %>
 [core]
-	excludesfile = ~/.gitignore
+  excludesfile = ~/.gitignore
 [push]
-	default = simple
+  default = simple
 [alias]
-	kudos = blame
+  kudos = blame
 [commit]
-	gpgsign = true
+  gpgsign = true
 [gpg]
-	program = /usr/local/bin/gpg
+  program = /usr/local/bin/gpg

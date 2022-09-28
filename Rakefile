@@ -47,7 +47,6 @@ def git_config
   @git_config ||= {
     :name => git_config_value("user.name"),
     :email => git_config_value("user.email"),
-    :work_email => git_config_value("user.email"),
     :signingkey => git_config_value("user.signingkey")
   }
 end
@@ -121,28 +120,6 @@ namespace :dotfiles do
 
       File.open(File.join(HOME, ".gitconfig"), "w") do |f|
         template = File.read(File.expand_path("gitconfig.erb"))
-        f.write ERB.new(template).result(binding)
-      end
-    end
-
-    puts "\n=> Installing .gitconfig_work"
-    if File.exists? "#{HOME}/.gitconfig_work"
-      print "  ~/.gitconfig_work already exists, do you want to overwrite it ? [yN] "
-
-      override = if $stdin.gets.chomp.downcase == "y"
-        true
-      else
-        puts "=> OK, the existing .gitconfig_work will be left in place."
-        false
-      end
-    end
-
-    if override || !File.exists?("#{HOME}/.gitconfig_work")
-      print "  Git work email [#{git_config[:work_email]}]: "
-      work_email = existing_or_new_value(:work_email)
-
-      File.open(File.join(HOME, ".gitconfig_work"), "w") do |f|
-        template = File.read(File.expand_path("gitconfig_work.erb"))
         f.write ERB.new(template).result(binding)
       end
     end
