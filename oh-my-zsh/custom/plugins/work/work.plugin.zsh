@@ -3,7 +3,7 @@
 unalias bootkaari 2>/dev/null
 function bootkaari() {
   HOLVIKAARI_SITE="ci"
-  HOLVIKAARI_PATH="$HOME/Code/work/holvikaari"
+  HOLVIKAARI_PATH="$HOME/Code/holvikaari"
   cd "$HOLVIKAARI_PATH"
   osascript <<END
   tell application "iTerm"
