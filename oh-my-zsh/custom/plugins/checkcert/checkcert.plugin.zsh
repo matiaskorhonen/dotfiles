@@ -1,4 +1,4 @@
-# Download the given URLs or PIDs to the ~/Downloads folder
+# Show the certificate for a given hostname
 function checkcert() {
   if [ -z "$1" ]
   then
