@@ -1,0 +1,2 @@
+# Mark all files and folders in the vim folder as vendored
+vim/** linguist-vendored
