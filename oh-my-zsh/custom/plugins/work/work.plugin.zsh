@@ -2,7 +2,7 @@
 
 unalias bootkaari 2>/dev/null
 function bootkaari() {
-  HOLVIKAARI_SITE=${1:?"CI"}
+  HOLVIKAARI_SITE="${1:-ci}"
   HOLVIKAARI_PATH="$HOME/Code/holvikaari"
   cd "$HOLVIKAARI_PATH"
   osascript <<END
