@@ -1,8 +1,5 @@
 export LC_ALL=en_US.UTF-8
 
-# Disable Homebrew analytics
-export HOMEBREW_NO_GOOGLE_ANALYTICS=1
-
 # Postgres.app CLI tools
 if [[ -d /Applications/Postgres.app/Contents/Versions ]] then
   export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"
