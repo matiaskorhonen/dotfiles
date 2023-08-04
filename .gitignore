@@ -6,3 +6,4 @@
 
 # Secrets and machine specific configuration
 /zlogin
+vim/.netrwhist
