@@ -1,19 +1,29 @@
 [color]
-  diff = auto
-  status = auto
-  branch = auto
-  interactive = auto
+	diff = auto
+	status = auto
+	branch = auto
+	interactive = auto
 [user]
-  name = <%= name %>
-  email = <%= email %>
-  signingkey = <%= signingkey %>
+	name = <%= name %>
+	email = <%= email %>
+	signingkey = <%= signingkey %>
 [core]
-  excludesfile = ~/.gitignore
+	excludesfile = ~/.gitignore
 [push]
-  default = simple
+	default = simple
+	autoSetupRemote = true
 [alias]
-  kudos = blame
+	kudos = blame
 [commit]
-  gpgsign = true
+	gpgsign = true
 [gpg]
-  program = /usr/local/bin/gpg
+	format = ssh
+[gpg "ssh"]
+	program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[init]
+	defaultBranch = main
