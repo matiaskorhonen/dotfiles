@@ -33,38 +33,12 @@ export EDITOR="vim"
 # Bundler editor (bundle open GEM)
 export BUNDLER_EDITOR="code"
 
-# Add the MySQL stuff to PATH (etc) if it is installed
-MYSQL="/usr/local/mysql/bin"
-if [ -d "$MYSQL" ]; then
-    export PATH=$PATH:$MYSQL
-    export DYLD_LIBRARY_PATH=/usr/local/mysql/lib:$DYLD_LIBRARY_PATH
-fi
-
 # Add the GOROOT-based install location to your PATH
 GOROOT="/usr/local/opt/go/libexec/bin"
 if [ -d "$GOROOT" ]; then
   export PATH=$PATH:$GOROOT
   export GOPATH="$HOME/Code/go"
   export PATH="$PATH:$GOPATH/bin"
-fi
-
-# AWS CLI completion
-AWS_COMPLETION="/usr/local/share/zsh/site-functions/_aws"
-if [ -f "$AWS_COMPLETION" ]; then
-  source "$AWS_COMPLETION"
-fi
-
-if [ -d "/usr/local/share/zsh/help" ]; then
-  unalias run-help
-  autoload run-help
-  HELPDIR=/usr/local/share/zsh/help
-fi
-
-# Homebrew installs zsh completion definitions to
-#  /usr/local/share/zsh/site-functions, which on $FPATH for the
-# Homebrew-installed zsh, but not for the system zsh.
-if (( ! ${fpath[(I)/usr/local/share/zsh/site-functions]} )); then
-  FPATH=/usr/local/share/zsh/site-functions:$FPATH
 fi
 
 test -e ${HOME}/.iterm2_shell_integration.zsh && source ${HOME}/.iterm2_shell_integration.zsh

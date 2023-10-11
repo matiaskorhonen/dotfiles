@@ -5,17 +5,6 @@ if [[ -d /Applications/Postgres.app/Contents/Versions ]] then
   export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"
 fi
 
-# Cargo binaries
-if [[ -d /Users/matt/.cargo/bin ]] then
-  export PATH="/Users/matt/.cargo/bin:$PATH"
-fi
-
-# Google Cloud CLI tools
-if [ -f "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc" ]; then
-  source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
-  source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
-fi
-
 # Android tooling
 export ANDROID_SDK="$HOME/Library/Android/sdk"
 if [[ -d "$ANDROID_SDK" ]] then
@@ -56,14 +45,16 @@ else
 fi
 FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
 
-# Add Homebrew bins to the beginning of PATH
-export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
-
 # fnm
 eval "$(fnm env --use-on-cd)"
 
 # rbenv
 eval "$(rbenv init -)"
+
+# Cargo binaries
+if [[ -d "$HOME/.cargo/bin" ]] then
+  export PATH="$HOME/.cargo/bin:$PATH"
+fi
 
 # rustup
 if [[ -f "$HOME/.cargo/env" ]]; then
