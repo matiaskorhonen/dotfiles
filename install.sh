@@ -59,7 +59,7 @@ prerequisites() {
       local gumarchive
 
       tmpdir="$(mktemp -d -t gum.XXXXX)"
-      gumarchive="$tmpdir/gum_${GUM_VERSION}_Darwin_arm64.tar.gz"
+      gumarchive="$tmpdir/gum_${GUM_VERSION}.tar.gz"
 
       echo "Downloading gum v${GUM_VERSION} to $gumarchive"
       curl -sLo "$gumarchive" "$(gum_download_url)"
