@@ -18,7 +18,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Create Oh My Zsh directory
-      run: mkdir -p ~/.oh-my-zsh/custom
+      run: mkdir -p ~/.oh-my-zsh/custom/themes ~/.oh-my-zsh/custom/plugins
     - name: Run install.sh
       run: ./install.sh
       env:
