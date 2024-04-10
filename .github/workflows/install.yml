@@ -1,0 +1,27 @@
+# Test that the install script runs without errors
+
+name: Install
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Create Oh My Zsh directory
+      run: mkdir -p ~/.oh-my-zsh/custom/themes ~/.oh-my-zsh/custom/plugins
+    - name: Run install.sh
+      run: ./install.sh
+      env:
+        NONINTERACTIVE: 1
+        TERM: xterm-256color
+        CLICOLOR_FORCE: 1
