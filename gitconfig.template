@@ -4,9 +4,9 @@
 	branch = auto
 	interactive = auto
 [user]
-	name = <%= name %>
-	email = <%= email %>
-	signingkey = <%= signingkey %>
+	name = $GIT_USER_NAME
+	email = $GIT_USER_EMAIL
+	signingkey = $GIT_SIGNING_KEY
 [core]
 	excludesfile = ~/.gitignore
 [push]
