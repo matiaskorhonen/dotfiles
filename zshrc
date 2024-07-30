@@ -41,4 +41,16 @@ if [ -d "$GOROOT" ]; then
   export PATH="$PATH:$GOPATH/bin"
 fi
 
+# To make Homebrew’s completions available in zsh, you must insert the
+# Homebrew-managed zsh/site-functions path into your FPATH before initialising
+# zsh’s completion facility.
+#
+# https://docs.brew.sh/Shell-Completion
+if type brew &>/dev/null; then
+  FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+
+  autoload -Uz compinit
+  compinit
+fi
+
 test -e ${HOME}/.iterm2_shell_integration.zsh && source ${HOME}/.iterm2_shell_integration.zsh

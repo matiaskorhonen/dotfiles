@@ -34,19 +34,13 @@ export CLICOLOR=1
 # expand functions in the prompt
 setopt prompt_subst
 
-# Add RVM to PATH for scripting
-export PATH="$PATH:$HOME/.rvm/bin"
-
 # Homebrew
 if [[ -f /opt/homebrew/bin/brew ]]; then
   eval "$(/opt/homebrew/bin/brew shellenv)"
-else
-  eval "$(/usr/local/bin/brew shellenv)"
 fi
-FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
 
 # fnm
-eval "$(fnm env --use-on-cd)"
+eval "$(fnm env --use-on-cd --shell zsh)"
 
 # rbenv
 eval "$(rbenv init -)"
@@ -58,5 +52,5 @@ fi
 
 # rustup
 if [[ -f "$HOME/.cargo/env" ]]; then
-  . "$HOME/.cargo/env"
+  source "$HOME/.cargo/env"
 fi
