@@ -23,7 +23,7 @@ ZSH_THEME="matt"
 DISABLE_COMPLETION_WAITING_DOTS="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-plugins=(c checkcert enable_touchid_sudo gem github iterm2-ssh macos pod rails rails_custom rust tag urltools)
+plugins=(c checkcert enable_touchid_sudo gem iterm2-ssh rails rails_custom rust tag until-fail urltools)
 
 source $ZSH/oh-my-zsh.sh
 
