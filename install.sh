@@ -2,16 +2,13 @@
 
 set -euo pipefail
 
-GUM_VERSION="0.13.0"
+GUM_VERSION="0.17.0"
 export GUM_INPUT_WIDTH="${COLUMNS:-80}"
 
 CWD=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &> /dev/null && pwd)
 OMZ_DIR="$HOME/.oh-my-zsh"
 
-DOTFILES=(ackrc gemrc get_iplayer gitattributes gitignore httpie inputrc irbrc pryrc rvmrc railsrc tm_properties vimrc vim zlogin zprofile zshrc)
-ZSH_CUSTOM_SCRIPTS="oh-my-zsh/custom/*.zsh"
-ZSH_CUSTOM_THEMES="oh-my-zsh/custom/themes/*"
-ZSH_CUSTOM_PLUGINS="oh-my-zsh/custom/plugins/*"
+DOTFILES=(ackrc gemrc gitattributes gitignore httpie inputrc irbrc pryrc railsrc vimrc vim zlogin zprofile zshrc)
 
 gum_download_url() {
   local OS;
@@ -115,26 +112,11 @@ function symlink_dotfiles() {
   done
 }
 
-function install_oh_my_zsh_customizations() {
-  gum log --structured --level info "Installing Oh My Zsh customizations"
+function install_starship_config() {
+  gum log --structured --level info "Installing Starship config"
 
-  for file in $ZSH_CUSTOM_SCRIPTS; do
-    target="$HOME/.$file"
-    source="$CWD/$file"
-    symlink_unless_target_exists "$source" "$target"
-  done
-
-  for dir in $ZSH_CUSTOM_THEMES; do
-    target="$HOME/.$dir"
-    source="$CWD/$dir"
-    symlink_unless_target_exists "$source" "$target"
-  done
-
-  for dir in $ZSH_CUSTOM_PLUGINS; do
-    target="$HOME/.$dir"
-    source="$CWD/$dir"
-    symlink_unless_target_exists "$source" "$target"
-  done
+  mkdir -p "$HOME/.config"
+  symlink_unless_target_exists "$CWD/starship.toml" "$HOME/.config/starship.toml"
 }
 
 function generate_gitconfig() {
@@ -176,5 +158,5 @@ function install_gitconfig() {
 prerequisites
 preamble
 symlink_dotfiles
-install_oh_my_zsh_customizations
+install_starship_config
 install_gitconfig
