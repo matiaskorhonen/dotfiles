@@ -1,3 +1,6 @@
+# Default editor
+export EDITOR="vim"
+
 # Set locale
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
@@ -47,6 +50,9 @@ eval "$(fnm env --use-on-cd --shell zsh)"
 # rbenv
 eval "$(rbenv init -)"
 
+# Bundler editor (bundle open GEM)
+export BUNDLER_EDITOR="code"
+
 # Cargo binaries
 if [[ -d "$HOME/.cargo/bin" ]] then
   export PATH="$HOME/.cargo/bin:$PATH"
@@ -55,4 +61,12 @@ fi
 # rustup
 if [[ -f "$HOME/.cargo/env" ]]; then
   source "$HOME/.cargo/env"
+fi
+
+# Go
+GOROOT="/usr/local/opt/go/libexec/bin"
+if [ -d "$GOROOT" ]; then
+  export PATH=$PATH:$GOROOT
+  export GOPATH="$HOME/Code/go"
+  export PATH="$PATH:$GOPATH/bin"
 fi

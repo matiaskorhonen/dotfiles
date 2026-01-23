@@ -1,20 +1,6 @@
 # Initialize Starship prompt
 eval "$(starship init zsh)"
 
-# Default editor
-export EDITOR="vim"
-
-# Bundler editor (bundle open GEM)
-export BUNDLER_EDITOR="code"
-
-# Add the GOROOT-based install location to your PATH
-GOROOT="/usr/local/opt/go/libexec/bin"
-if [ -d "$GOROOT" ]; then
-  export PATH=$PATH:$GOROOT
-  export GOPATH="$HOME/Code/go"
-  export PATH="$PATH:$GOPATH/bin"
-fi
-
 # To make Homebrew’s completions available in zsh, you must insert the
 # Homebrew-managed zsh/site-functions path into your FPATH before initialising
 # zsh’s completion facility.
