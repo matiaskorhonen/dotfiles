@@ -9,7 +9,7 @@ Just my dot files. Use them if you can...
 ## Prerequisites
 
 * Git
-* [Oh My Zsh!](https://ohmyz.sh) should be installed in the `~/.oh-my-zsh` directory
+* [Starship.rs](https://starship.rs)
 * The install script needs [Gum](https://github.com/charmbracelet/gum) but it can automatically download a temporary copy of it on macOS and Linux.
 
 ## Installation
