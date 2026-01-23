@@ -13,6 +13,7 @@ if type brew &>/dev/null; then
   compinit
 fi
 
+source "$HOME/.dotfiles/plugins/keybindings/keybindings.plugin.zsh"
 source "$HOME/.dotfiles/plugins/c/c.plugin.zsh"
 source "$HOME/.dotfiles/plugins/until-fail/until-fail.plugin.zsh"
 source "$HOME/.dotfiles/plugins/iterm2-ssh/iterm2-ssh.plugin.zsh"
