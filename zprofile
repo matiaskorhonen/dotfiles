@@ -1,4 +1,6 @@
+# Set locale
 export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
 
 # Postgres.app CLI tools
 if [[ -d /Applications/Postgres.app/Contents/Versions ]] then
