@@ -1,6 +1,7 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
 add_newline = false
+command_timeout = 1000
 
 [aws]
 disabled = true
@@ -19,6 +20,7 @@ symbol = ""
 modified = "*"
 deleted = "!"
 renamed = "~"
+stashed = ""
 
 [erlang]
 symbol = "ⓔ "
