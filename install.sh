@@ -145,7 +145,7 @@ function install_gitconfig() {
   if [ -e "$HOME/.gitconfig" ]; then
     gum log --structured --level info "Git config already exists" path "$HOME/.gitconfig"
 
-    if gum confirm "$HOME/.gitconfig already exists, do you want to overwrite it?"; then
+    if gum confirm --default=false "$HOME/.gitconfig already exists, do you want to overwrite it?"; then
       gum log --structured --level info "Overwriting git config"
     else
       gum log --structured --level info "Skipping gitconfig generation"
