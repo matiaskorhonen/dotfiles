@@ -8,7 +8,7 @@ export GUM_INPUT_WIDTH="${COLUMNS:-80}"
 CWD=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &> /dev/null && pwd)
 OMZ_DIR="$HOME/.oh-my-zsh"
 
-DOTFILES=(ackrc gemrc gitattributes gitignore httpie inputrc irbrc pryrc railsrc vimrc vim zlogin zprofile zshrc)
+DOTFILES=(ackrc gemrc gitattributes gitignore inputrc irbrc pryrc railsrc vimrc vim zlogin zprofile zshrc)
 
 gum_download_url() {
   local OS;
@@ -120,6 +120,13 @@ function install_starship_config() {
   symlink_unless_target_exists "$CWD/starship.toml" "$HOME/.config/starship.toml"
 }
 
+function install_httpie_config() {
+  gum log --structured --level info "Installing HTTPie config"
+
+  mkdir -p "$HOME/.config"
+  symlink_unless_target_exists "$CWD/httpie" "$HOME/.config/httpie"
+}
+
 function generate_gitconfig() {
   gum log --structured --level info "Generating git config"
 
@@ -160,4 +167,5 @@ prerequisites
 preamble
 symlink_dotfiles
 install_starship_config
+install_httpie_config
 install_gitconfig
