@@ -120,12 +120,7 @@ function install_starship_config() {
   symlink_unless_target_exists "$CWD/starship.toml" "$HOME/.config/starship.toml"
 }
 
-function install_httpie_config() {
-  gum log --structured --level info "Installing HTTPie config"
 
-  mkdir -p "$HOME/.config"
-  symlink_unless_target_exists "$CWD/httpie" "$HOME/.config/httpie"
-}
 
 function generate_gitconfig() {
   gum log --structured --level info "Generating git config"
@@ -167,5 +162,4 @@ prerequisites
 preamble
 symlink_dotfiles
 install_starship_config
-install_httpie_config
 install_gitconfig
