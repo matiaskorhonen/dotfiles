@@ -64,8 +64,9 @@ prerequisites() {
       echo "Extracting gum to $tmpdir"
       tar -xf "$gumarchive" -C "$tmpdir"
 
-      echo "Adding $tmpdir to PATH for the duration of this script"
-      export PATH="$tmpdir:$PATH"
+      gumdir=$(find "$tmpdir" -mindepth 1 -maxdepth 1 -type d | head -1)
+      echo "Adding $gumdir directory to PATH for the duration of this script"
+      export PATH="$gumdir:$PATH"
 
       print_separator
 
