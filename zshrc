@@ -13,13 +13,17 @@ if type brew &>/dev/null; then
   compinit
 fi
 
-# Rename plugins directory to lib
-source "$HOME/.dotfiles/lib/keybindings.zsh"
-source "$HOME/.dotfiles/lib/c.zsh"
-source "$HOME/.dotfiles/lib/until-fail.zsh"
-source "$HOME/.dotfiles/lib/iterm2-ssh.zsh"
-source "$HOME/.dotfiles/lib/rails-custom.zsh"
+# Load iTerm2 shell integration if on macOS and in iTerm2
+if [[ "$OSTYPE" == darwin* ]] && [[ -n "$ITERM_SESSION_ID" ]] ; then
+  source "$HOME/.dotfiles/lib/iterm2-shell-integration.zsh"
+fi
+
 source "$HOME/.dotfiles/lib/aliases.zsh"
+source "$HOME/.dotfiles/lib/c.zsh"
+source "$HOME/.dotfiles/lib/iterm2-ssh.zsh"
+source "$HOME/.dotfiles/lib/keybindings.zsh"
+source "$HOME/.dotfiles/lib/rails-custom.zsh"
+source "$HOME/.dotfiles/lib/until-fail.zsh"
 source "$HOME/.dotfiles/lib/window-title.zsh"
 
 test -e ${HOME}/.iterm2_shell_integration.zsh && source ${HOME}/.iterm2_shell_integration.zsh

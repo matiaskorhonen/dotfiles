@@ -1,2 +1,3 @@
 # Mark all files and folders in the vim folder as vendored
 vim/** linguist-vendored
+lib/iterm2-shell-integration.zsh linguist-vendored
