@@ -43,4 +43,4 @@ function set_window_title(){
 }
 
 # https://starship.rs/advanced-config/#change-window-title
-precmd_functions+=(set_win_title)
+precmd_functions+=(set_window_title)
