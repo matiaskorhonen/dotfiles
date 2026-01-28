@@ -20,5 +20,6 @@ source "$HOME/.dotfiles/lib/until-fail.zsh"
 source "$HOME/.dotfiles/lib/iterm2-ssh.zsh"
 source "$HOME/.dotfiles/lib/rails-custom.zsh"
 source "$HOME/.dotfiles/lib/aliases.zsh"
+source "$HOME/.dotfiles/lib/window-title.zsh"
 
 test -e ${HOME}/.iterm2_shell_integration.zsh && source ${HOME}/.iterm2_shell_integration.zsh
