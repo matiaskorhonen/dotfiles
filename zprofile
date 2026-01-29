@@ -18,6 +18,9 @@ if [[ -d /Applications/Postgres.app/Contents/Versions ]] then
   export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"
 fi
 
+# Disable Docker CLI promotions
+export DOCKER_CLI_HINTS=false
+
 # Android tooling
 export ANDROID_SDK="$HOME/Library/Android/sdk"
 if [[ -d "$ANDROID_SDK" ]] then
