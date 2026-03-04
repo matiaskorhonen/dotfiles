@@ -1,6 +1,9 @@
 # Initialize Starship prompt
 eval "$(starship init zsh)"
 
+# Load completion configuration early
+source "$HOME/.dotfiles/lib/completion.zsh"
+
 # To make Homebrew’s completions available in zsh, you must insert the
 # Homebrew-managed zsh/site-functions path into your FPATH before initialising
 # zsh’s completion facility.
