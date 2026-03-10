@@ -13,7 +13,8 @@
 	default = simple
 	autoSetupRemote = true
 [alias]
-	kudos = blame
+	# Delete squash merged branches
+	delete-merged = !git branch --format '%(if:equals=gone)%(upstream:track,nobracket)%(then)%(refname:short)%(end)' --omit-empty | xargs -r git branch -D
 [commit]
 	gpgsign = true
 [gpg]
