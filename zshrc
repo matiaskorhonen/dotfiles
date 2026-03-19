@@ -23,6 +23,7 @@ fi
 
 source "$HOME/.dotfiles/lib/aliases.zsh"
 source "$HOME/.dotfiles/lib/c.zsh"
+source "$HOME/.dotfiles/lib/history.zsh"
 source "$HOME/.dotfiles/lib/iterm2-ssh.zsh"
 source "$HOME/.dotfiles/lib/keybindings.zsh"
 source "$HOME/.dotfiles/lib/rails-custom.zsh"
