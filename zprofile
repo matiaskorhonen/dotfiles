@@ -5,6 +5,11 @@ export EDITOR="vim"
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
+# Suppresses macOS's post-fork ObjC crash guard, which otherwise kills processes
+# that fork after the ObjC runtime was touched on another thread. Fixes issues
+# with Bridgetown, Rails, and other Ruby projects.
+export OBJC_DISABLE_INITIALIZE_FORK_SAFETY
+
 # Postgres.app CLI tools
 if [[ -d /Applications/Postgres.app/Contents/Versions ]] then
   export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"
