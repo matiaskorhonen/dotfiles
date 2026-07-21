@@ -8,7 +8,7 @@ export LANG=en_US.UTF-8
 # Suppresses macOS's post-fork ObjC crash guard, which otherwise kills processes
 # that fork after the ObjC runtime was touched on another thread. Fixes issues
 # with Bridgetown, Rails, and other Ruby projects.
-export OBJC_DISABLE_INITIALIZE_FORK_SAFETY
+export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
 
 # Postgres.app CLI tools
 if [[ -d /Applications/Postgres.app/Contents/Versions ]] then
